@@ -1,0 +1,14 @@
+﻿<Window x:Class="PoliklinikOtomasyon.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PoliklinikOtomasyon"
+        mc:Ignorable="d"
+        Title="Hakkımızda" Height="450" Width="436.435" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Hakkımızda" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Segoe UI Black" FontSize="35" Foreground="#FFF5B22F" Background="{x:Null}"/>
+        <Label Content="Poliklinik Otomasyon sistemi polikliniklerde, dişçilerde&#xA;ve benzeri sağlık kurumlarında hasta kayıt sistemidir.&#xA;Bu sistem sayesinde hastalarınızı çağırabilir onların&#xA;bilgilerini güvenle saklayabilirsiniz.&#xA;Poliklinik Otomasyon sistemi Fatih Ayar tarafından&#xA;geliştirilmiştir&#xA;&#xA;&#xA;Fayarcompany&#xA;fatihayaaar@gmail.com" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" FontFamily="Kozuka Gothic Pr6N H" Height="322" FontSize="15" Width="400" Foreground="#FF565656"/>
+
+    </Grid>
+</Window>

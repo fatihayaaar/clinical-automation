@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbPoliklinikModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBLDOKTOR">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KimlikNo" Type="varchar" MaxLength="50" />
+    <Property Name="AdiSoyadi" Type="varchar" MaxLength="50" />
+    <Property Name="TelefonNo" Type="varchar" MaxLength="50" />
+    <Property Name="Cinsiyeti" Type="varchar" MaxLength="50" />
+    <Property Name="MailAdresi" Type="varchar" MaxLength="50" />
+    <Property Name="DogumTarihi" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBLHASTA">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdiSoyadi" Type="varchar" MaxLength="50" />
+    <Property Name="KimlikNo" Type="varchar" MaxLength="50" />
+    <Property Name="TelefonNo" Type="varchar" MaxLength="50" />
+    <Property Name="DogumTarihi" Type="datetime" />
+    <Property Name="Cinsiyeti" Type="varchar" MaxLength="50" />
+    <Property Name="RandevuTarihi" Type="datetime" />
+    <Property Name="KayitTipi" Type="varchar" MaxLength="50" />
+    <Property Name="DoktorId" Type="int" />
+  </EntityType>
+  <Association Name="FK_TBLHASTA_TBLDOKTOR">
+    <End Role="TBLDOKTOR" Type="Self.TBLDOKTOR" Multiplicity="0..1" />
+    <End Role="TBLHASTA" Type="Self.TBLHASTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLDOKTOR">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TBLHASTA">
+        <PropertyRef Name="DoktorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DbPoliklinikModelStoreContainer">
+    <EntitySet Name="TBLDOKTOR" EntityType="Self.TBLDOKTOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLHASTA" EntityType="Self.TBLHASTA" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TBLHASTA_TBLDOKTOR" Association="Self.FK_TBLHASTA_TBLDOKTOR">
+      <End Role="TBLDOKTOR" EntitySet="TBLDOKTOR" />
+      <End Role="TBLHASTA" EntitySet="TBLHASTA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

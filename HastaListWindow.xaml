@@ -1,0 +1,36 @@
+﻿<Window x:Class="PoliklinikOtomasyon.HastaListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PoliklinikOtomasyon"
+        mc:Ignorable="d"
+        Title="Randevulu Hastalar" Height="648.025" Width="953.432" ResizeMode="NoResize">
+    <Grid Margin="0,0,5.5,6.5">
+        <Label Content="Randevulu Hastalar" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontFamily="Segoe UI Black" Height="40" Width="258" Foreground="#FFF3BE20"/>
+        <Label Content="Aşağıda kayıtlı hastalar listelenmektedir." HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Height="26" Width="448"/>
+        <DataGrid HorizontalAlignment="Left" Margin="10,96,0,0" Width="918" Name="hastaDataGrid" BorderBrush="#FFCDCDCD" Foreground="#FF282828" Height="462" VerticalAlignment="Top" SelectionChanged="hastaDataGrid_SelectionChanged" SelectionMode="Single" AutoGenerateColumns="False" ColumnWidth="*" FontWeight="Bold" HorizontalGridLinesBrush="#FF3C3C3C" VerticalGridLinesBrush="#FF343434" Opacity="0.8">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" Header="Id" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding AdiSoyadi}" Header="Ad Soyad" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding KimlikNo}" Header="Kimlik Numarası" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding TelefonNo}" Header="Telefon Numarası" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding DogumTarihi}" Header="Doğum Tarihi" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding Cinsiyeti}" Header="Cinsiyet" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding RandevuTarihi}" Header="Randevu Tarihi" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding KayitTipi}" Header="Kayıt Tipi" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding DoktorAdi}" Header="Doktor Adı" IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="bekleyenGosterButton" Content="Bekleyen Randevular" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="169" BorderBrush="{x:Null}" Background="#FFEBA83F" Foreground="White" AutomationProperties.Name="bekleyenGosterButton" Click="bekleyenGosterButton_Click"/>
+        <Button x:Name="gecmisGosterButton" Content="Geçmiş Randevular" HorizontalAlignment="Left" Margin="185,67,0,0" VerticalAlignment="Top" Width="169" BorderBrush="{x:Null}" Background="#FFDDDDDD" AutomationProperties.Name="gecmisGosterButton" Click="gecmisGosterButton_Click"/>
+        <Button x:Name="kayitDuzenleButton" Content="Düzenle" HorizontalAlignment="Left" Margin="759,67,0,0" VerticalAlignment="Top" Width="169" BorderBrush="{x:Null}" Background="#FFDDDDDD" AutomationProperties.Name="kayitDuzenleButton" Click="kayitDuzenleButton_Click" IsEnabled="False"/>
+        <Button x:Name="randevuBitirButton" Content="Seçilen Randevuyu Bitir" HorizontalAlignment="Left" Margin="759,569,0,0" VerticalAlignment="Top" Width="169" BorderBrush="{x:Null}" Background="#FFEBA83F" Foreground="White" AutomationProperties.Name="randevuBitirButton" IsEnabled="False" Height="31" Click="randevuBitirButton_Click"/>
+        <Button x:Name="hastaEkleButton" Content="Ekle" HorizontalAlignment="Left" Margin="691,67,0,0" VerticalAlignment="Top" Width="63" BorderBrush="{x:Null}" FontWeight="Bold" Background="#FFEBA83F" Foreground="White" AutomationProperties.Name="hastaEkleButton" Click="hastaEkleButton_Click"/>
+        <Button x:Name="oncelikAtaButton" Content="Öncelik Ata" HorizontalAlignment="Left" Margin="584,569,0,0" VerticalAlignment="Top" Width="169" BorderBrush="{x:Null}" Background="#FFEBA83F" Foreground="White" AutomationProperties.Name="oncelikAtaButton" IsEnabled="False" Height="31" AutomationProperties.IsRequiredForForm="True" Click="oncelikAtaButton_Click"/>
+        <Button x:Name="hastaCagirButton" Content="Sıradaki Hastayı Çağır" HorizontalAlignment="Left" Margin="10,569,0,0" VerticalAlignment="Top" Width="197" Height="31" BorderBrush="{x:Null}" Foreground="White" Background="#FFEBA83F" AutomationProperties.Name="hastaCagirButton" Click="hastaCagirButton_Click"/>
+        <Button x:Name="temizleButton" Content="Tümünü Göster" HorizontalAlignment="Left" Margin="361,67,0,0" VerticalAlignment="Top" Width="169" BorderBrush="{x:Null}" Background="#FFDDDDDD" AutomationProperties.Name="temizleButton" Click="temizleButton_Click"/>
+        <Label x:Name="labelHasta" Content="" HorizontalAlignment="Left" Margin="213,572,0,0" VerticalAlignment="Top" AutomationProperties.Name="labelHasta"/>
+        <Button x:Name="mrandevuBitirButton" Content="Randevuyu Bitir" HorizontalAlignment="Left" Margin="402,572,0,0" VerticalAlignment="Top" Width="106" AutomationProperties.Name="mrandevuBitirButton" Click="mrandevuBitirButton_Click" Height="28" BorderBrush="{x:Null}" Foreground="#FF2E2E2E" FontWeight="Bold"/>
+    </Grid>
+</Window>
