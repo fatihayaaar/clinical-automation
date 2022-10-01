@@ -1,5 +1,7 @@
 # Clinical Automation
 
+Poliklinik Otomasyon sistemi polikliniklerde, dişçilerde ve benzeri sağlık kurumlarında hasta kayıt sistemidir.Bu sistem sayesinde hastalarınızı çağırabilir onların bilgilerini güvenle saklayabilirsiniz.
+
 ![image](https://user-images.githubusercontent.com/18555532/193419748-6abbd471-fcca-433b-9399-dd5fd6ef78c5.png)
 ![image](https://user-images.githubusercontent.com/18555532/193419785-e5fb5646-17c2-4436-81bc-764971ffe516.png)
 ![image](https://user-images.githubusercontent.com/18555532/193419794-9caecfbb-ba8b-4b94-abaa-f3dbe871fd41.png)
