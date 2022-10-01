@@ -1,0 +1,33 @@
+﻿<Window x:Class="PoliklinikOtomasyon.HastaInsertWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PoliklinikOtomasyon"
+        mc:Ignorable="d"
+        Title="Hasta Kayıt Ekle" Height="691.354" Width="489.784" ResizeMode="NoResize">
+    <Grid Margin="0,0,-5,10" HorizontalAlignment="Left" Width="483">
+        <Button x:Name="insertButton" Content="EKLE" HorizontalAlignment="Left" Margin="20,560,0,0" VerticalAlignment="Top" Width="438" Height="35" FontFamily="Segoe UI Black" FontSize="14" FontWeight="Bold" Background="#FFEBA83F" Foreground="White" AutomationProperties.Name="insertButton" Click="insertButton_Click" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="hastaTCnoTextBox" HorizontalAlignment="Left" Height="30" Margin="20,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="438" AutomationProperties.Name="hastaTCnoTextBox" FontSize="17"/>
+        <TextBox x:Name="hastaNameTextBox" HorizontalAlignment="Left" Height="29" Margin="20,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="438" AutomationProperties.Name="hastaNameTextBox" FontSize="17"/>
+        <Label Content="Hasta Kayıt Ekle" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" FontSize="33" FontWeight="Bold" FontFamily="Segoe UI Black" Height="65" Width="309" Background="{x:Null}" Foreground="#FFEBA83F"/>
+        <Label Content="Hasta Adı ve Soyadı" HorizontalAlignment="Left" Margin="20,92,0,0" VerticalAlignment="Top" Height="33" Width="155"/>
+        <Label Content="Kimlik Numarası" HorizontalAlignment="Left" Margin="20,205,0,0" VerticalAlignment="Top" Height="33" Width="129"/>
+        <Label Content="Hasta Doğum Tarihi" HorizontalAlignment="Left" Margin="20,261,0,0" VerticalAlignment="Top" Height="33" Width="249"/>
+        <Label Content="Hangi Doktora Randevu Alındı" HorizontalAlignment="Left" Margin="20,378,0,0" VerticalAlignment="Top" Height="33" Width="230"/>
+        <Label Content="Randevu Tarihi" HorizontalAlignment="Left" Margin="20,492,0,0" VerticalAlignment="Top" Height="34" Width="249"/>
+        <Label Content="Kayıt eklemek için alttaki bilgileri doldurunuz." HorizontalAlignment="Left" Margin="20,50,0,0" VerticalAlignment="Top" Height="33" Width="336" FontSize="15"/>
+        <ComboBox x:Name="doctorComboBox" HorizontalAlignment="Left" Margin="20,404,0,0" VerticalAlignment="Top" Width="438" Height="29" AutomationProperties.Name="doctorComboBox" FontSize="17"/>
+        <DatePicker x:Name="hastaDatePixer" HorizontalAlignment="Left" Margin="20,285,0,0" VerticalAlignment="Top" Height="30" Width="438" AutomationProperties.Name="hastaDatePixer" FontSize="17"/>
+        <DatePicker x:Name="hastaRandevuDatePixer" HorizontalAlignment="Left" Margin="20,517,0,0" VerticalAlignment="Top" Height="29" AutomationProperties.Name="hastaRandevuDatePixer" Width="438" FontSize="17" SelectedDate="{Binding Date, StringFormat='dd/MM/yyyy HH:mm:ss'}" SelectedDateFormat="Long"/>
+        <TextBox x:Name="telephoneNoTextBox" HorizontalAlignment="Left" Height="30" Margin="20,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="438" AutomationProperties.Name="telephoneNoTextBox" FontSize="17"/>
+        <Label Content="Telefon Numarası" HorizontalAlignment="Left" Margin="20,320,0,0" VerticalAlignment="Top" Height="33" Width="129"/>
+        <Label Content="Randevu Tipi" HorizontalAlignment="Left" Margin="20,436,0,0" VerticalAlignment="Top" Height="33" Width="230"/>
+        <ComboBox x:Name="randevuTipiComboBox" HorizontalAlignment="Left" Margin="20,462,0,0" VerticalAlignment="Top" Width="438" Height="29" AutomationProperties.Name="randevuTipiComboBox" FontSize="17">
+        </ComboBox>
+        <Label Content="Cinsiyeti" HorizontalAlignment="Left" Margin="20,147,0,0" VerticalAlignment="Top" Height="33" Width="155"/>
+        <ComboBox x:Name="cinsiyetComboBox" HorizontalAlignment="Left" Margin="20,173,0,0" VerticalAlignment="Top" Width="438" Height="29" AutomationProperties.Name="cinsiyetComboBox" FontSize="17">
+        </ComboBox>
+
+    </Grid>
+</Window>

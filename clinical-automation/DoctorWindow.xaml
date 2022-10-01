@@ -1,0 +1,41 @@
+﻿<Window x:Class="PoliklinikOtomasyon.DoctorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PoliklinikOtomasyon"
+        mc:Ignorable="d"
+        Title="Doktor bilgi Paneli" Height="654.283" Width="1189.5" ResizeMode="NoResize">
+    <Grid Height="608" VerticalAlignment="Top" Margin="0,0,-0.5,0">
+        <Label Content="Doktor bilgi Paneli" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontFamily="Segoe UI Black" Foreground="#FFE8A349"/>
+        <Label Content="Doktor bilgi panelinde ekleme, silme, değiştirme işlemleri yapılabilir." HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="insertButton" Content="EKLE" HorizontalAlignment="Left" Margin="10,366,0,0" VerticalAlignment="Top" Width="325" Height="28" FontFamily="Segoe UI Black" FontSize="14" FontWeight="Bold" Background="#FFE8A349" Foreground="White" AutomationProperties.Name="insertButton" Click="insertButton_Click" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="mailTextBox" HorizontalAlignment="Left" Height="23" Margin="10,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" AutomationProperties.Name="mailTextBox"/>
+        <TextBox x:Name="telNumberTextBox" HorizontalAlignment="Left" Height="23" Margin="10,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" AutomationProperties.Name="telNumberTextBox"/>
+        <TextBox x:Name="tcnoTextBox" HorizontalAlignment="Left" Height="23" Margin="10,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" AutomationProperties.Name="tcnoTextBox"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Height="23" Margin="10,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" AutomationProperties.Name="nameTextBox"/>
+        <Label x:Name="label1" Content="Adı Soyadı" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Height="26" Width="86" AutomationProperties.Name="label1"/>
+        <Label Content="TC Kimlik no" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Height="26" Width="78"/>
+        <Label Content="Telefon Numarası" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" Height="26" Width="116"/>
+        <Label Content="E-mail" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
+        <Label Content="Doğum Tarihi" HorizontalAlignment="Left" Margin="10,294,0,0" VerticalAlignment="Top" Height="26" Width="116"/>
+        <DataGrid x:Name="doctorDataGrid" HorizontalAlignment="Left" Height="525" Margin="354,73,0,0" VerticalAlignment="Top" Width="808" AutomationProperties.Name="doctorDataGrid" BorderBrush="#FFE2E2E2" Foreground="#FF2B2B2B" SelectionChanged="doctorDataGrid_SelectionChanged" SelectionMode="Single" AutoGenerateColumns="False" ColumnWidth="*" FontWeight="Bold" HorizontalGridLinesBrush="#FF3C3C3C" VerticalGridLinesBrush="#FF343434" Opacity="0.8">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" Header="Id" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding AdiSoyadi}" Header="Ad Soyad" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding KimlikNo}" Header="Kimlik Numarası" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding TelefonNo}" Header="Telefon Numarası" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding Cinsiyeti}" Header="Cinsiyet" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding MailAdresi}" Header="Mail Adresi" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding DogumTarihi}" Header="Doğum Tarihi" IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="deleteButton" Content="SİL" HorizontalAlignment="Left" Margin="172,399,0,0" VerticalAlignment="Top" Width="163" Height="28" FontFamily="Segoe UI Black" FontSize="14" FontWeight="Bold" Background="#FFC32E2E" Foreground="White" AutomationProperties.Name="deleteButton" BorderBrush="{x:Null}" Click="deleteButton_Click"/>
+        <Button x:Name="editButton" Content="DEĞİŞTİR" HorizontalAlignment="Left" Margin="10,399,0,0" VerticalAlignment="Top" Width="157" Height="28" FontFamily="Segoe UI Black" FontSize="14" FontWeight="Bold" Background="#FFE8A349" Foreground="White" AutomationProperties.Name="editButton" BorderBrush="{x:Null}" Click="editButton_Click"/>
+        <DatePicker x:Name="userDatePixer" HorizontalAlignment="Left" Margin="10,317,0,0" VerticalAlignment="Top" Width="325" AutomationProperties.Name="userDataPixer"/>
+        <Label Content="Cinsiyeti" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Height="26" Width="116"/>
+        <ComboBox x:Name="cinsiyetComboBox" HorizontalAlignment="Left" Margin="10,228,0,0" VerticalAlignment="Top" Width="325" AutomationProperties.Name="cinsiyetComboBox">
+        </ComboBox>
+        <Button x:Name="clearButton" Content="TEMİZLE" HorizontalAlignment="Left" Margin="10,434,0,0" VerticalAlignment="Top" Width="325" Height="28" FontFamily="Segoe UI Black" FontSize="14" FontWeight="Bold" Background="Gainsboro" Foreground="#FF434343" AutomationProperties.Name="clearButton" BorderBrush="{x:Null}" Click="clearButton_Click"/>
+    </Grid>
+</Window>
