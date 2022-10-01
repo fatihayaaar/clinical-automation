@@ -1,4 +1,4 @@
-# Clinical Automation
+# Clinical Automation (2020)
 
 Poliklinik Otomasyon sistemi polikliniklerde, dişçilerde ve benzeri sağlık kurumlarında hasta kayıt sistemidir.Bu sistem sayesinde hastalarınızı çağırabilir onların bilgilerini güvenle saklayabilirsiniz.
 
