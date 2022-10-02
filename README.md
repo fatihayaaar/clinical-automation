@@ -1,7 +1,8 @@
 # Clinical Automation (2020)
 
 Poliklinik Otomasyon sistemi polikliniklerde, dişçilerde ve benzeri sağlık kurumlarında hasta kayıt sistemidir.Bu sistem sayesinde hastalarınızı çağırabilir onların bilgilerini güvenle saklayabilirsiniz.
-Bir WPF uygulamasıdır. Entity Framework kullanılmıştır.
+* Bir WPF uygulamasıdır.
+* Entity Framework kullanılmıştır.
 
 # Doktor Ekleme Paneli
 ![image](https://user-images.githubusercontent.com/18555532/193419748-6abbd471-fcca-433b-9399-dd5fd6ef78c5.png)
